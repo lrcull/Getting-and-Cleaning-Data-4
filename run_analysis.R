@@ -57,6 +57,6 @@ avedata<-extdata %>%
   group_by(Subject, Activity) %>%
   summarise_each(funs(mean))
 
-#Create a new, tidy table.
+#Create test file.
 
-write.table(avedata, file="avedata.txt", row.names=FALSE, col.names=TRUE)
+write.table(avedata, "avedata.txt", sep=",", row.names=FALSE)
